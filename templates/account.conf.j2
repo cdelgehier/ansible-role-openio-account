@@ -18,3 +18,18 @@ autocreate = true
 {% if openio_account_workers is defined and openio_account_workers %}workers = {{ openio_account_workers }}{% endif %}
 
 {% if openio_account_backlog is defined and openio_account_backlog %}backlog = {{ openio_account_backlog }}{% endif %}
+
+# Redis parameters (see redis.connection module)
+redis_socket_timeout={{ openio_account_redis_socket_timeout }}
+redis_socket_connect_timeout={{ openio_account_redis_socket_connect_timeout }}
+redis_socket_keepalive={{ openio_account_redis_socket_keepalive }}
+redis_retry_on_timeout={{ openio_account_redis_retry_on_timeout }}
+redis_max_connections={{ openio_account_redis_max_connections }}
+
+# Redis sentinel parameters, override Redis parameters
+# for connections to the sentinels.
+redis_sentinel_socket_timeout={{ openio_account_sentinel_socket_timeout }}
+redis_sentinel_socket_connect_timeout={{ openio_account_sentinel_socket_connect_timeout }}
+redis_sentinel_socket_keepalive={{ openio_account_sentinel_socket_keepalive }}
+redis_sentinel_retry_on_timeout={{ openio_account_sentinel_retry_on_timeout }}
+redis_sentinel_max_connections={{ openio_account_sentinel_max_connections }}
