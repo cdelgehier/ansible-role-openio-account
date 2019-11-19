@@ -25,7 +25,7 @@ openio_account_redis_socket_timeout: "60"
 openio_account_redis_socket_connect_timeout: "3"
 openio_account_redis_socket_keepalive: false
 openio_account_redis_retry_on_timeout: false
-openio_account_redis_max_connections: "2**18"
+openio_account_redis_max_connections: "262144" #2**18
 openio_account_sentinel_socket_timeout: "5"
 openio_account_sentinel_socket_connect_timeout: "3"
 openio_account_sentinel_socket_keepalive: "{{ openio_account_redis_socket_keepalive }}"
