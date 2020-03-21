@@ -24,7 +24,6 @@
     group: "{{ item.group | default('openio') }}"
     mode: "{{ item.mode | default(0755) }}"
   with_items:
-    - path: "/etc/gridinit.d/{{ openio_account_namespace }}"
     - path: "{{ openio_account_sysconfig_dir }}/{{ openio_account_servicename }}"
     - path: "/etc/oio/sds/{{ openio_account_namespace }}/watch"
     - path: "/var/log/oio/sds/{{ openio_account_namespace }}/{{ openio_account_servicename }}"

@@ -6,7 +6,7 @@
 # Tests
 
 @test 'Gridinit unit present' {
-  run bash -c "docker exec -ti ${SUT_ID} cat /etc/gridinit.d/TRAVIS/account-0.conf"
+  run bash -c "docker exec -ti ${SUT_ID} cat /etc/gridinit.d/TRAVIS-account-0.conf"
   echo "output: "$output
   echo "status: "$status
   [[ "${status}" -eq "0" ]]
