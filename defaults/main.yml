@@ -4,7 +4,7 @@ openio_account_serviceid: "{{ 0 + openio_legacy_serviceid | d(0) | int }}"
 
 openio_account_version: 'latest'
 
-openio_account_bind_interface: "{{ ansible_default_ipv4.alias }}"
+openio_account_bind_interface: "{{ openio_bind_interface | d(ansible_default_ipv4.alias) }}"
 openio_account_bind_address: "{{ openio_bind_address \
   | default(hostvars[inventory_hostname]['ansible_' + openio_account_bind_interface]['ipv4']['address']) }}"
 
